@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Auto-save</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Auto-save</h1>
+            <p class="subtitle">Seu texto é salvo automaticamente enquanto você digita</p>
+        </header>
+        
+        <div class="content">
+            <div class="text-area-container">
+                <label for="textInput">Digite seu texto:</label>
+                <textarea id="textInput" placeholder="Comece a digitar aqui... O conteúdo será salvo automaticamente no seu navegador."></textarea>
+                
+                <div class="stats-bar">
+                    <div class="char-counter">
+                        <span class="counter-value" id="charCount">0</span>
+                        <span class="counter-label">caracteres</span>
+                    </div>
+                    
+                    <div class="save-status">
+                        <div class="save-icon" id="saveIcon"></div>
+                        <span id="saveStatus">Pronto para salvar</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="clearBtn">Limpar rascunho</button>
+            </div>
+            
+            <div class="instructions">
+                <h3>Como funciona:</h3>
+                <ul>
+                    <li>O conteúdo é <strong>salvo automaticamente</strong> no LocalStorage do seu navegador a cada vez que você digita</li>
+                    <li>O contador de caracteres é atualizado em tempo real</li>
+                    <li>Quando você recarrega a página, o texto é recuperado automaticamente</li>
+                    <li>Use o botão "Limpar rascunho" para remover o conteúdo salvo</li>
+                    <li>Os dados ficam armazenados apenas no seu computador</li>
+                </ul>
+            </div>
+            
+            <footer>
+                <p>Os dados são salvos apenas no seu navegador usando <code>localStorage</code> e não são enviados para servidores externos.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
